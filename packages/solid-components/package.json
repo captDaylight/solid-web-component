@@ -1,0 +1,29 @@
+{
+  "name": "solid-components",
+  "version": "0.0.0",
+  "description": "",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.umd.js"
+    }
+  },
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.9.5",
+    "vite": "^4.1.1",
+    "vite-plugin-solid": "^2.5.0"
+  },
+  "dependencies": {
+    "path": "^0.12.7",
+    "solid-js": "^1.6.10"
+  }
+}
