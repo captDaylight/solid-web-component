@@ -1,9 +1,15 @@
 import { defineConfig } from "vite";
 import solidPlugin from "vite-plugin-solid";
 import { resolve } from "path";
+import copy from "rollup-plugin-copy";
 
 export default defineConfig({
-  plugins: [solidPlugin()],
+  plugins: [
+    solidPlugin(),
+    copy({
+      targets: [{ src: "src", dest: "dist" }],
+    }),
+  ],
   server: {
     port: 3000,
   },
@@ -14,5 +20,8 @@ export default defineConfig({
       fileName: "index",
     },
     target: "esnext",
+    rollupOptions: {
+      external: ["solid-js"],
+    },
   },
 });
